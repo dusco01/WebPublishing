@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumegraphy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .topbar{
+            width: 100%;
+            height: 300px;
+            background-color: #F6F3F0;
+        }
+
+        .topbar_text{
+            width: 1620px;
+            height: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 100px 0;
+        }
+
+        .main_title{
+            font-size: 60px;
+            color: #5A3E19;
+            font-family: "Noto Serif KR", serif;
+            margin-left: 5px;
+            width: 500px;
+            height: 80px;
+            text-decoration: none;
+        }
+
+        .sidebar{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            width: 1620px;
+            height: 50px;
+        }
+
+        .sidebar_text{
+            width: 1300px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar_text_1:hover, .sidebar_text_2:hover, .sidebar_text_3:hover, .sidebar_text_4:hover{
+            font-weight: bold;
+            border-bottom: 2px solid #999999;
+        }
+
+        .sidebar_text_1, .sidebar_text_2{
+            width: 200px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 100px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_text_3{
+            width: 400px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 100px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_text_4{
+            width: 200px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_icon{
+            width: 200px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 120px;
+        }
+
+        .profile_icon, .heart_icon{
+            width: 40px;
+            height: 40px;
+            margin-right: 40px;
+            color: #333333;
+        }
+
+        .search_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+        }
+
+        .hello_box{
+            width: 1500px;
+            height: 300px;
+            font-size: 40px;
+            margin-top: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .spring, .summer, .autumn, .winter{
+            width: 1500px;
+            height: 1390px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+        }
+
+        .spring_text, .summer_text, .autumn_text, .winter_text{
+            width: 1500px;
+            height: 350px;
+        }
+
+        .spring_title, .autumn_title, .winter_title{
+            width: 250px;
+            height: 100px;
+            font-size: 80px;
+            font-family: "Nanum Myeongjo", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .summer_title{
+            width: 300px;
+            height: 100px;
+            font-size: 80px;
+            font-family: "Nanum Myeongjo", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .spring_content, .summer_content, .autumn_content, .winter_content{
+            width: 1500px;
+            height: 250px;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            color: #333333;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        .spring_recommendation_perfume, .summer_recommendation_perfume, .autumn_recommendation_perfume, .winter_recommendation_perfume{
+            width: 1500px;
+            height: 840px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .perfume_1, .perfume_3{
+            width: 450px;
+            height: 840px;
+        }
+
+        .perfume_2{
+            width: 450px;
+            height: 840px;
+            margin: 0 75px;
+        }
+
+        .perfume_img_1, .perfume_img_2, .perfume_img_3{
+            width: 450px;
+            height: 600px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .perfume_text_1, .perfume_text_2, .perfume_text_3{
+            width: 450px;
+            height: 220px;
+        }
+
+        .perfume_title_1, .perfume_title_2, .perfume_title_3{
+            width: 450px;
+            height: 100px;
+            line-height: 50px;
+        }
+
+        .perfume_company_1, .perfume_company_2, .perfume_company_3{
+            width: 450px;
+            height: 50px;
+            font-size: 25px;
+            font-family: "Nanum Myeongjo", serif;
+            color: #333333;
+            line-height: 50px;
+        }
+
+        .perfume_name_1, .perfume_name_2, .perfume_name_3{
+            width: 450px;
+            height: 50px;
+            font-size: 35px;
+            font-weight: bold;
+            font-family: "Nanum Myeongjo", serif;
+            display: table-cell;
+            vertical-align: middle;
+            color: #333333;
+        }
+
+        .line{
+            width: 450px;
+            border-bottom: 1px solid #ccc;
+            margin: 10px 0;
+        }
+
+        .perfume_content_1, .perfume_content_2, .perfume_content_3{
+            width: 450px;
+            height: 100px;
+            font-size: 25px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+
+        .footer{
+            width: 100%;
+            height: 350px;
+            background-color: #F9F9F9;
+            margin-top: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer_total_info{
+            padding-left: 50px;
+            padding-top: 25px;
+            width: 1203px;
+            height: 320px;
+
+        }
+        .footer_first_info_text_1{
+            width: 400px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .footer_first_info_text_2{
+            width: 900px;
+            height: 50px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .footer_first_info{
+            width: 900px;
+            height: 100px;
+        }
+
+        .footer_second_info{
+            width: 1143px;
+            height: 130px;
+        }
+
+        .footer_second_info_sidebar{
+            display: flex;
+            flex-direction: row;
+            width: 860px;
+            height: 40px;
+        }
+
+        .footer_second_info_sidebar_text{
+            width: 650px;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+        }
+
+        .footer_second_info_sidebar_text_1{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_2{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_3{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_4{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .divid_line {
+            border-left : 1px solid #999999;
+            height : 30px;
+            margin: 0 50px;
+        }
+
+        .footer_second_info_sidebar_icon{
+            width: 100px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .instagram_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+            margin-right: 20px;
+        }
+
+        .facebook_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+        }
+
+        .footer_second_info_total_text{
+            margin-left: 10px;
+        }
+
+
+        .footer_second_info_total_text_line_1{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .trade_name, .representative, .registration_num, .report_num, .customer_service, .address, .personal_info{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .trade_name_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .trade_name_content{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .representative_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .representative_content{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .registration_num_title{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .registration_num_content{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .report_num_title{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .report_num_content{
+            width: 300px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .footer_second_info_total_text_line_2{
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+        }
+
+        .customer_service_title{
+            width: 70px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .customer_service_content{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .address_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .address_content{
+            width: 450px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .personal_info_title{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .personal_info_content{
+            width: 270px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .footer_second_info_total_text_line_3{
+            width: 1020px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .footer_third_info_text{
+            width: 330px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar_text">
+            <a class="main_title" href="index.html">Perfumegraphy</a>
+            <div class="sidebar">
+                <div class="sidebar_text">
+                    <a class="sidebar_text_1" href="perfume_affiliation_page.html">향기의 계열</a>
+                    <a class="sidebar_text_2" href="perfume_classification_page.html">향수의 분류</a>
+                    <a class="sidebar_text_3" href="season_perfume_page.html">계절별로 어울리는 향수</a>
+                    <a class="sidebar_text_4" href="perfume_note_page.html">향수 노트</a>
+                </div>
+                <div class="sidebar_icon">
+                    <img class="profile_icon" src="image/profile.png">
+                    <img class="heart_icon" src="image/heart.png">
+                    <img class="search_icon" src="image/search.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hello_box">
+        <p>계절별 향수 선택은 어떻게 하면 좋을까요?<br>
+            각 계절의 변화에 따라 향수 선택도 중요한 요소가 됩니다. 계절이 가진 고유한 분위기와 어울리는 향수는 그 순간을 더욱 기억에 남게 하고, 일상생활에 활력소를 불어넣습니다. 계절의 특성을 고려하여 향수를 선택하면, 매일의 분위기를 더욱 특별하게 만들 수 있습니다. 함께 나만의 특별한 향수를 찾아보세요.</p>
+    </div>
+
+    <div class="spring">
+        <div class="spring_text">
+            <p class="spring_title">Spring</p>
+            <p class="spring_content">봄은 새로운 시작과 상쾌함을 상징합니다. 이 계절에 잘 어울리는 향은 코튼 계열과 피오니, 재스민과 같은 플로럴 계열입니다. 이들은 봄의 활기찬 분위기를 반영하며, 따뜻해지는 날씨에 가볍고 상쾌한 느낌을 줍니다.</p>
+        </div>
+
+        <div class="spring_recommendation_perfume">
+            <div class="perfume_1">
+                <img class="perfume_img_1" src="https://image.sivillage.com/upload/C00001/goods/org/900/230907006184900.jpg?RS=600&SP=1">
+                <div class="perfume_text_1">
+                    <div class="perfume_title_1">
+                        <p class="perfume_company_1">바이레도</p>
+                        <p class="perfume_name_1">라튤립</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_1">화사한 튤립 생화 향으로 부드럽고 아련한 분위기를 자아내는 향수.</p>
+                </div>
+            </div>
+
+            <div class="perfume_2">
+                <img class="perfume_img_2" src="https://image.sivillage.com/upload/C00001/goods/org/417/230310004444417.jpg?RS=600&SP=1">
+                <div class="perfume_text_2">
+                    <div class="perfume_title_2">
+                        <p class="perfume_company_2">산타마리아노벨라</p>
+                        <p class="perfume_name_2">프리지아</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_2">따스한 햇살과 노란 꽃이 떠오르는 포근하고 안정적인 느낌을 주는 향수.</p>
+                </div>
+            </div>
+
+            <div class="perfume_3">
+                <img class="perfume_img_3" src="https://i.postimg.cc/RVkRKh1p/2024-06-25-163434.png">
+                <div class="perfume_text_3">
+                    <div class="perfume_title_3">
+                        <p class="perfume_company_3">디올</p>
+                        <p class="perfume_name_3">블루밍부케</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_3">상큼한 베르가못향이 나다가 점차 화사한 꽃향으로 변하는 여성미 가득한 달콤한 향수.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="summer">
+        <div class="summer_text">
+            <p class="summer_title">Summer</p>
+            <p class="summer_content">여름은 청량감이 필요한 시기입니다. 만다린 같은 시트러스 계열과 과일과 같은 프루티 계열은 여름에 완벽한 선택입니다. 이들은 시원하고 신선한 느낌을 주어, 뜨거운 여름날에 상쾌함을 선사합니다.</p>
+        </div>
+
+        <div class="summer_recommendation_perfume">
+            <div class="perfume_1">
+                <img class="perfume_img_1" src="https://image.oliveyoung.co.kr/uploads/images/goods/550/10/0000/0016/A00000016106401ko.jpg?l=ko">
+                <div class="perfume_text_1">
+                    <div class="perfume_title_1">
+                        <p class="perfume_company_1">안나수이</p>
+                        <p class="perfume_name_1">시크릿 위시</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_1">메론과 레몬의 향이 상큼달달하게 느껴지다 시간이 흐르면 은은하고 달달한 머스크 향이 깔리는 향수.</p>
+                </div>
+            </div>
+
+            <div class="perfume_2">
+                <img class="perfume_img_2" src="https://image.sivillage.com/upload/C00001/goods/org/472/210924001482472.jpg?RS=600&SP=1">
+                <div class="perfume_text_2">
+                    <div class="perfume_title_2">
+                        <p class="perfume_company_2">산타마리아노벨라</p>
+                        <p class="perfume_name_2">아쿠아 델라 레지나</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_2">레몬에이드에 상쾌한 허브를 띄운 것 같은 향수.</p>
+                </div>
+            </div>
+
+            <div class="perfume_3">
+                <img class="perfume_img_3" src="https://image.sivillage.com/upload/C00001/goods/org/892/210504001214892.jpg?RS=600&SP=1">
+                <div class="perfume_text_3">
+                    <div class="perfume_title_3">
+                        <p class="perfume_company_3">딥디크</p>
+                        <p class="perfume_name_3">오에도</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_3">자몽, 귤 껍질의 향기가 풍겨 
+                        잔잔한 시트러스 향을 느낄 수 있는 향수.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="autumn">
+        <div class="autumn_text">
+            <p class="autumn_title">Autumn</p>
+            <p class="autumn_content">가을은 섬세하고 신비로운 계절입니다. 우디 계열은 가을의 깊은 숲을, 머스크 계열은 부드러운 가을밤을 연상시킵니다. 이 향들은 풍부하고 깊은 느낌을 주며, 서늘한 날씨에 안정감과 따스함을 더해줍니다.</p>
+        </div>
+
+        <div class="autumn_recommendation_perfume">
+            <div class="perfume_1">
+                <img class="perfume_img_1" src="https://i.postimg.cc/kMZFPGHM/2024-06-25-164929.png">
+                <div class="perfume_text_1">
+                    <div class="perfume_title_1">
+                        <p class="perfume_company_1">톰포드</p>
+                        <p class="perfume_name_1">오드 우드</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_1">특유의 우디한 향과 조화롭게 어우러진 
+                        플로럴과 시트러스 노트로 이루어진 향수.</p>
+                </div>
+            </div>
+
+            <div class="perfume_2">
+                <img class="perfume_img_2" src="https://image.sivillage.com/upload/C00001/goods/org/498/231108006981498.jpg?RS=750&SP=1">
+                <div class="perfume_text_2">
+                    <div class="perfume_title_2">
+                        <p class="perfume_company_2">딥 디크</p>
+                        <p class="perfume_name_2">탐 다오 오 드 퍼퓸</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_2">사우나 나무향 같은 느낌에 중간중간 
+                        플로럴 향이 살짝 올라와 유니크한 향수.</p>
+                </div>
+            </div>
+
+            <div class="perfume_3">
+                <img class="perfume_img_3" src="https://i.postimg.cc/sfS9ysCp/2024-06-25-165234.png">
+                <div class="perfume_text_3">
+                    <div class="perfume_title_3">
+                        <p class="perfume_company_3">로에</p>
+                        <p class="perfume_name_3">신시어 우디</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_3">울창한 나무 숲에서 느껴지는 편안한 젖은 
+                        나뭇잎과 이끼의 향을 느껴볼 수 있는 향수.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="winter">
+        <div class="winter_text">
+            <p class="winter_title">Winter</p>
+            <p class="winter_content">겨울은 따뜻하고 포근한 향이 필요한 기간입니다. 가죽 등의 레더 계열은 겨울의 강인함을, 시나몬, 진저 등의 스파이시 계열은 겨울의 축제 분위기를 반영합니다. 이 향들은 추운 겨울 날에 따뜻함과 포근함을 선사합니다.</p>
+        </div>
+
+        <div class="winter_recommendation_perfume">
+            <div class="perfume_1">
+                <img class="perfume_img_1" src="https://www.chanel.com/images//t_one//w_0.51,h_0.51,c_crop/q_auto:good,f_autoplus,fl_lossy,dpr_1.1/w_840/coromandel-les-exclusifs-de-chanel-eau-de-parfum-6-8fl-oz—packshot-default-122290-9536679968798.jpg">
+                <div class="perfume_text_1">
+                    <div class="perfume_title_1">
+                        <p class="perfume_company_1">샤넬</p>
+                        <p class="perfume_name_1">레 엑스클루시브 꼬로망델</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_1">중국의 병풍인 코로망델 스크린에서부터 
+                        영감을 얻은 스파이시 앰버 향수.</p>
+                </div>
+            </div>
+
+            <div class="perfume_2">
+                <img class="perfume_img_2" src="https://www.jomalone.co.kr/media/export/cms/products/1000x1000/jo_sku_L00M01_1000x1000_0.png">
+                <div class="perfume_text_2">
+                    <div class="perfume_title_2">
+                        <p class="perfume_company_2">조 말론 런던</p>
+                        <p class="perfume_name_2">넛맥 앤 진저</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_2">조 말론이 개발한 최초의 향으로, 방금 슬라이스한 생강 뿌리의 톡 쏘는 강렬함과 따뜻한 너트메그의 향기가 어우러진 향수.</p>
+                </div>
+            </div>
+
+            <div class="perfume_3">
+                <img class="perfume_img_3" src="http://parisiennerepublic.com/web/product/big/easycosmetic/47703.png">
+                <div class="perfume_text_3">
+                    <div class="perfume_title_3">
+                        <p class="perfume_company_3">조르지오 아르마니</p>
+                        <p class="perfume_name_3">프리베 앙브르 이첸트리코</p>
+                    </div>
+                    <div class="line"></div>
+                    <p class="perfume_content_3">시나몬과 앰버의 묵직하고 알싸한 조화를 
+                        맛볼 수 있는 향수.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer_total_info">
+            <div class="footer_first_info">
+                <p class="footer_first_info_text_1">PERFUMEGRAPHY PROCESS</p>
+                <p class="footer_first_info_text_2">퍼퓸그라피는 브랜드 직수입, 정식 계약 또는 공식 수입사를 통한 입점으로 100% 정품만 판매합니다.</p>
+            </div>
+
+            <div class="footer_second_info">
+                <div class="footer_second_info_sidebar">
+                    <div class="footer_second_info_sidebar_text">
+                        <p class="footer_second_info_sidebar_text_1">회사 소개</p>
+                        <p class="footer_second_info_sidebar_text_2">이용약관</p>
+                        <p class="footer_second_info_sidebar_text_3">개인정보처리방침</p>
+                        <p class="footer_second_info_sidebar_text_4">이용안내</p>
+                    </div>
+                    <div class="divid_line"></div>
+                    <div class="footer_second_info_sidebar_icon">
+                        <img class="instagram_icon" src="image/instagram.png">
+                        <img class="facebook_icon" src="image/facebook.png">
+                    </div>
+                </div>
+
+                <div class="footer_second_info_total_text">
+                    <div class="footer_second_info_total_text_line_1">
+                        <div class="trade_name">
+                            <p class="trade_name_title">상호명</p>
+                            <p class="trade_name_content">주식회사 퍼퓸그라피</p>
+                        </div>
+                        <div class="representative">
+                            <p class="representative_title">대표자</p>
+                            <p class="representative_content">송채연</p>
+                        </div>
+                        <div class="registration_num">
+                            <p class="registration_num_title">사업자 등록번호</p>
+                            <p class="registration_num_content">000-00-00000</p>
+                        </div>
+                        <div class="report_num">
+                            <p class="report_num_title">통신판매업신고번호</p>
+                            <p class="report_num_content">제 2019-서울종로-0106호 [사업자정보확인]</p>
+                        </div>
+                    </div>
+                    <div class="footer_second_info_total_text_line_2">
+                        <div class="customer_service">
+                            <p class="customer_service_title">고객센터</p>
+                            <p class="customer_service_content">000-0000-0000</p>
+                        </div>
+                        <div class="address">
+                            <p class="address_title">주소</p>
+                            <p class="address_content">00000 경기도 시흥시 산기대학로 237 한국공학대학교 퍼퓸그라피</p>
+                        </div>
+                        <div class="personal_info">
+                            <p class="personal_info_title">개인정보보호책임자</p>
+                            <p class="personal_info_content">송채연(thdcodus0222@tukorea.ac.kr)</p>
+                        </div>
+                    </div>
+                    <p class="footer_second_info_total_text_line_3">※ 퍼퓸그라피에서 제공하는 모든 컨텐츠는 저작권법에 보호받는 저작물로서, 무단으로 복제, 배포하는 경우에는 저작권법에 의하여 처벌 을 받을 수 있습니다.</p>
+                </div>
+                <p class="footer_third_info_text">Copyright © 퍼퓸그라피. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

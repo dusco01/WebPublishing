@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumegraphy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .topbar{
+            width: 100%;
+            height: 300px;
+            background-color: #F6F3F0;
+        }
+
+        .topbar_text{
+            width: 1620px;
+            height: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 100px 0;
+        }
+
+        .main_title{
+            font-size: 60px;
+            color: #5A3E19;
+            font-family: "Noto Serif KR", serif;
+            margin-left: 5px;
+            width: 500px;
+            height: 80px;
+            text-decoration: none;
+        }
+
+        .sidebar{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            width: 1620px;
+            height: 50px;
+        }
+
+        .sidebar_text{
+            width: 1300px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar_text_1:hover, .sidebar_text_2:hover, .sidebar_text_3:hover, .sidebar_text_4:hover{
+            font-weight: bold;
+            border-bottom: 2px solid #999999;
+        }
+
+        .sidebar_text_1, .sidebar_text_2{
+            width: 200px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 100px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_text_3{
+            width: 400px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 100px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_text_4{
+            width: 200px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_icon{
+            width: 200px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 120px;
+        }
+
+        .profile_icon, .heart_icon{
+            width: 40px;
+            height: 40px;
+            margin-right: 40px;
+            color: #333333;
+        }
+
+        .search_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+        }
+
+        .hello_box{
+            width: 1500px;
+            height: 200px;
+            font-size: 40px;
+            margin-top: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            line-height: 60px;
+        }
+        
+        .floral{
+            width: 1500px;
+            height: 1080px;
+            margin-top: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .floral_text{
+            width: 1500px;
+            height: 380px;
+        }
+
+        .floral_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .floral_content{
+            width: 1500px;
+            height: 300px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        .floral_img{
+            width: 1400px;
+            height: 600px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .oriental{
+            width: 1400px;
+            height: 800px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .oriental_text{
+            width: 700px;
+            height: 680px;
+            margin: 60px 0;
+        }
+
+        .oriental_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .oriental_content{
+            width: 700px;
+            height: 600px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        .oriental_img{
+            width: 600px;
+            height: 800px;
+            margin-left: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .woody{
+            width: 1400px;
+            height: 800px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .woody_text{
+            width: 700px;
+            height: 680px;
+            margin-top: 60px;
+            margin-left: 100px;
+            margin-bottom: 60px;
+        }
+
+        .woody_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .woody_content{
+            width: 700px;
+            height: 600px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        .woody_img{
+            width: 600px;
+            height: 800px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .fresh{
+            width: 1500px;
+            height: 1080px;
+            margin-top: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .fresh_text{
+            width: 1500px;
+            height: 380px;
+        }
+
+        .fresh_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .fresh_content{
+            width: 1500px;
+            height: 300px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        .fresh_img{
+            width: 1400px;
+            height: 600px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .footer{
+            width: 100%;
+            height: 350px;
+            background-color: #F9F9F9;
+            margin-top: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer_total_info{
+            padding-left: 50px;
+            padding-top: 25px;
+            width: 1203px;
+            height: 320px;
+
+        }
+        .footer_first_info_text_1{
+            width: 400px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .footer_first_info_text_2{
+            width: 900px;
+            height: 50px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .footer_first_info{
+            width: 900px;
+            height: 100px;
+        }
+
+        .footer_second_info{
+            width: 1143px;
+            height: 130px;
+        }
+
+        .footer_second_info_sidebar{
+            display: flex;
+            flex-direction: row;
+            width: 860px;
+            height: 40px;
+        }
+
+        .footer_second_info_sidebar_text{
+            width: 650px;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+        }
+
+        .footer_second_info_sidebar_text_1{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_2{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_3{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_4{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .divid_line {
+            border-left : 1px solid #999999;
+            height : 30px;
+            margin: 0 50px;
+        }
+
+        .footer_second_info_sidebar_icon{
+            width: 100px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .instagram_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+            margin-right: 20px;
+        }
+
+        .facebook_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+        }
+
+        .footer_second_info_total_text{
+            margin-left: 10px;
+        }
+
+
+        .footer_second_info_total_text_line_1{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .trade_name, .representative, .registration_num, .report_num, .customer_service, .address, .personal_info{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .trade_name_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .trade_name_content{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .representative_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .representative_content{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .registration_num_title{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .registration_num_content{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .report_num_title{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .report_num_content{
+            width: 300px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .footer_second_info_total_text_line_2{
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+        }
+
+        .customer_service_title{
+            width: 70px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .customer_service_content{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .address_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .address_content{
+            width: 450px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .personal_info_title{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .personal_info_content{
+            width: 270px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .footer_second_info_total_text_line_3{
+            width: 1020px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .footer_third_info_text{
+            width: 330px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar_text">
+            <a class="main_title" href="index.html">Perfumegraphy</a>
+            <div class="sidebar">
+                <div class="sidebar_text">
+                    <a class="sidebar_text_1" href="perfume_affiliation_page.html">향기의 계열</a>
+                    <a class="sidebar_text_2" href="perfume_classification_page.html">향수의 분류</a>
+                    <a class="sidebar_text_3" href="season_perfume_page.html">계절별로 어울리는 향수</a>
+                    <a class="sidebar_text_4" href="perfume_note_page.html">향수 노트</a>
+                </div>
+                <div class="sidebar_icon">
+                    <img class="profile_icon" src="image/profile.png">
+                    <img class="heart_icon" src="image/heart.png">
+                    <img class="search_icon" src="image/search.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hello_box">
+        <p>향수의 세계는 다양한 향기로 가득 차 있습니다.<br>
+        지금 감각을 매혹할 네 가지 주요 계열의 향수를 소개해드리겠습니다. 각 향수는 독특한 매력과 분위기를 지니고 있어, 일상과 특별한 순간을 한층 더 빛나게 만들어줄 것입니다.</p>
+    </div>
+
+    <div class="floral">
+        <div class="floral_text">
+            <p class="floral_title">플로럴</p>
+            <p class="floral_content">플로럴 계열의 향수는 꽃의 우아하고 섬세한 향기를 담아냅니다. 그 속에는 장미, 재스민, 라벤더와 같은 다양한 꽃향이 조화를 이루어 로맨틱하고 여성스러운 분위기를 연출합니다. 마치 꽃밭을 거닐고 있는 듯한 기분을 선사하는 플로럴 향은 일상에서도 자연스럽게 어울리며, 특별한 날에도 완벽한 선택입니다. 다채로움을 지닌 꽃부터 강렬한 화이트로 만발한 꽃까지, 다양한 팔레트를 선사하는 플로랄 향으로 공간에 행복감을 더해보세요.
+            </p>
+        </div>
+        <img class="floral_img" src="https://i.pinimg.com/564x/5a/8d/99/5a8d99e5852988bcc2663d9aebaa04dd.jpg">
+    </div>
+
+    <div class="oriental">
+        <div class="oriental_text">
+            <p class="oriental_title">오리엔탈</p>
+            <p class="oriental_content">오리엔탈 계열의 향수는 따뜻하고 달콤한 맛을 느끼게 하는데, 가끔은 조금의 매운 맛이 더해집니다. 이 향수는 또한 이국적이고 관능적인 느낌을 주며, 바닐라, 앰버, 머스크, 향신료 등의 따뜻하고 깊은 향이 조화를 이루어 매혹적이고 신비로운 분위기를 자아냅니다. 부드러운 꽃 향기부터 나무로 된 동양적인 향기까지, 오리엔탈 향으로 특별한 저녁 모임이나 중요한 자리에서 당신의 존재감을 더욱 빛내보세요.
+            </p>
+        </div>
+        <img class="oriental_img" src="https://i.pinimg.com/564x/2c/aa/fa/2caafa5171bfcdd42bacae4763e29d33.jpg">
+    </div>
+
+    <div class="woody">
+        <img class="woody_img" src="https://i.pinimg.com/564x/1f/76/74/1f76741995624a193dcf3b81ed6ed07f.jpg">
+        <div class="woody_text">
+            <p class="woody_title">우디</p>
+            <p class="woody_content">우디 계열의 향수는 자연 속 깊은 숲을 연상시키는 따뜻하고 고급스러운 향으로, 변치 않는 우아함과 지금 이 순간에 몰입하는 듯한 느낌을 선사합니다. 또한, 샌달우드, 시더우드, 파출리 등의 나무 향이 조화롭게 어우러져 차분하고 안정된 느낌을 줍니다. 따뜻하고 크리미한 나무향부터 가볍고 스모키한 노트까지, 아늑한 편안함과 매력적인 에너지로 공간을 채워보세요.
+            </p>
+        </div>
+    </div>
+
+    <div class="fresh">
+        <div class="fresh_text">
+            <p class="fresh_title">프레쉬</p>
+            <p class="fresh_content">프레시 계열의 향수는 상쾌하고 신선한 느낌을 주는 매력적인 선택입니다. 이 향수들은 시트러스, 민트, 그리고 허브와 같은 경쾌한 향을 가지고 있어, 마치 맑은 아침 공기를 마시는 듯한 상쾌함을 느끼게 해줍니다. 프레시 향수는 일상적인 활동을 활력 있게 만들어주며, 활기찬 분위기를 연출하는 데 아주 적합합니다. 이 향수는 따뜻한 날씨나 밝고 경쾌한 분위기의 자리에서 특히 잘 어울리며, 당신의 상쾌한 매력을 돋보이게 해줄 것입니다.
+            </p>
+        </div>
+        <img class="fresh_img" src="https://i.pinimg.com/564x/18/3b/de/183bde9fe8bcc472152fe200a558e35a.jpg">
+    </div>
+
+    <div class="footer">
+        <div class="footer_total_info">
+            <div class="footer_first_info">
+                <p class="footer_first_info_text_1">PERFUMEGRAPHY PROCESS</p>
+                <p class="footer_first_info_text_2">퍼퓸그라피는 브랜드 직수입, 정식 계약 또는 공식 수입사를 통한 입점으로 100% 정품만 판매합니다.</p>
+            </div>
+
+            <div class="footer_second_info">
+                <div class="footer_second_info_sidebar">
+                    <div class="footer_second_info_sidebar_text">
+                        <p class="footer_second_info_sidebar_text_1">회사 소개</p>
+                        <p class="footer_second_info_sidebar_text_2">이용약관</p>
+                        <p class="footer_second_info_sidebar_text_3">개인정보처리방침</p>
+                        <p class="footer_second_info_sidebar_text_4">이용안내</p>
+                    </div>
+                    <div class="divid_line"></div>
+                    <div class="footer_second_info_sidebar_icon">
+                        <img class="instagram_icon" src="image/instagram.png">
+                        <img class="facebook_icon" src="image/facebook.png">
+                    </div>
+                </div>
+
+                <div class="footer_second_info_total_text">
+                    <div class="footer_second_info_total_text_line_1">
+                        <div class="trade_name">
+                            <p class="trade_name_title">상호명</p>
+                            <p class="trade_name_content">주식회사 퍼퓸그라피</p>
+                        </div>
+                        <div class="representative">
+                            <p class="representative_title">대표자</p>
+                            <p class="representative_content">송채연</p>
+                        </div>
+                        <div class="registration_num">
+                            <p class="registration_num_title">사업자 등록번호</p>
+                            <p class="registration_num_content">000-00-00000</p>
+                        </div>
+                        <div class="report_num">
+                            <p class="report_num_title">통신판매업신고번호</p>
+                            <p class="report_num_content">제 2019-서울종로-0106호 [사업자정보확인]</p>
+                        </div>
+                    </div>
+                    <div class="footer_second_info_total_text_line_2">
+                        <div class="customer_service">
+                            <p class="customer_service_title">고객센터</p>
+                            <p class="customer_service_content">000-0000-0000</p>
+                        </div>
+                        <div class="address">
+                            <p class="address_title">주소</p>
+                            <p class="address_content">00000 경기도 시흥시 산기대학로 237 한국공학대학교 퍼퓸그라피</p>
+                        </div>
+                        <div class="personal_info">
+                            <p class="personal_info_title">개인정보보호책임자</p>
+                            <p class="personal_info_content">송채연(thdcodus0222@tukorea.ac.kr)</p>
+                        </div>
+                    </div>
+                    <p class="footer_second_info_total_text_line_3">※ 퍼퓸그라피에서 제공하는 모든 컨텐츠는 저작권법에 보호받는 저작물로서, 무단으로 복제, 배포하는 경우에는 저작권법에 의하여 처벌 을 받을 수 있습니다.</p>
+                </div>
+                <p class="footer_third_info_text">Copyright © 퍼퓸그라피. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

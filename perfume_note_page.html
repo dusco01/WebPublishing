@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumegraphy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .topbar{
+            width: 100%;
+            height: 300px;
+            background-color: #F6F3F0;
+        }
+
+        .topbar_text{
+            width: 1620px;
+            height: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 100px 0;
+        }
+
+        .main_title{
+            font-size: 60px;
+            color: #5A3E19;
+            font-family: "Noto Serif KR", serif;
+            margin-left: 5px;
+            width: 500px;
+            height: 80px;
+            text-decoration: none;
+        }
+
+        .sidebar{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            width: 1620px;
+            height: 50px;
+        }
+
+        .sidebar_text{
+            width: 1300px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar_text_1:hover, .sidebar_text_2:hover, .sidebar_text_3:hover, .sidebar_text_4:hover{
+            font-weight: bold;
+            border-bottom: 2px solid #999999;
+        }
+
+        .sidebar_text_1, .sidebar_text_2{
+            width: 200px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 100px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_text_3{
+            width: 400px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 100px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_text_4{
+            width: 200px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_icon{
+            width: 200px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 120px;
+        }
+
+        .profile_icon, .heart_icon{
+            width: 40px;
+            height: 40px;
+            margin-right: 40px;
+            color: #333333;
+        }
+
+        .search_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+        }
+
+        .hello_box{
+            width: 1500px;
+            height: 250px;
+            font-size: 40px;
+            margin-top: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .top_note, .middle_note, .base_note{
+            width: 1500px;
+            height: 1080px;
+            margin-top: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .top_note_text, .middle_note_text, .base_note_text{
+            width: 1500px;
+            height: 380px;
+        }
+
+        .top_note_title, .middle_note_title, .base_note_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .top_note_content, .middle_note_content, .base_note_content{
+            width: 1500px;
+            height: 300px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .top_note_img, .middle_note_img, .base_note_img{
+            width: 1400px;
+            height: 600px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .footer{
+            width: 100%;
+            height: 350px;
+            background-color: #F9F9F9;
+            margin-top: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer_total_info{
+            padding-left: 50px;
+            padding-top: 25px;
+            width: 1203px;
+            height: 320px;
+
+        }
+        .footer_first_info_text_1{
+            width: 400px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .footer_first_info_text_2{
+            width: 900px;
+            height: 50px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .footer_first_info{
+            width: 900px;
+            height: 100px;
+        }
+
+        .footer_second_info{
+            width: 1143px;
+            height: 130px;
+        }
+
+        .footer_second_info_sidebar{
+            display: flex;
+            flex-direction: row;
+            width: 860px;
+            height: 40px;
+        }
+
+        .footer_second_info_sidebar_text{
+            width: 650px;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+        }
+
+        .footer_second_info_sidebar_text_1{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_2{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_3{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_4{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .divid_line {
+            border-left : 1px solid #999999;
+            height : 30px;
+            margin: 0 50px;
+        }
+
+        .footer_second_info_sidebar_icon{
+            width: 100px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .instagram_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+            margin-right: 20px;
+        }
+
+        .facebook_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+        }
+
+        .footer_second_info_total_text{
+            margin-left: 10px;
+        }
+
+
+        .footer_second_info_total_text_line_1{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .trade_name, .representative, .registration_num, .report_num, .customer_service, .address, .personal_info{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .trade_name_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .trade_name_content{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .representative_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .representative_content{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .registration_num_title{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .registration_num_content{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .report_num_title{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .report_num_content{
+            width: 300px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .footer_second_info_total_text_line_2{
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+        }
+
+        .customer_service_title{
+            width: 70px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .customer_service_content{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .address_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .address_content{
+            width: 450px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .personal_info_title{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .personal_info_content{
+            width: 270px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .footer_second_info_total_text_line_3{
+            width: 1020px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .footer_third_info_text{
+            width: 330px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar_text">
+            <a class="main_title" href="index.html">Perfumegraphy</a>
+            <div class="sidebar">
+                <div class="sidebar_text">
+                    <a class="sidebar_text_1" href="perfume_affiliation_page.html">향기의 계열</a>
+                    <a class="sidebar_text_2" href="perfume_classification_page.html">향수의 분류</a>
+                    <a class="sidebar_text_3" href="season_perfume_page.html">계절별로 어울리는 향수</a>
+                    <a class="sidebar_text_4" href="perfume_note_page.html">향수 노트</a>
+                </div>
+                <div class="sidebar_icon">
+                    <img class="profile_icon" src="image/profile.png">
+                    <img class="heart_icon" src="image/heart.png">
+                    <img class="search_icon" src="image/search.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="hello_box">
+        <p>향수를 고를 때 낯선 용어들 때문에 어려움을 겪는 분들이 많습니다.<br>향수는 시간이 흐름에 따라 세 가지 다른 향을 뿜어냅니다. 이것을 발향 단계로 나누어 "탑 노트", "미들 노트", "베이스 노트"로 표현합니다. 함께 향수의 세계를 탐험하며, 향수를 선택하는 과정을 즐겁게 만들어보세요.</p>
+    </div>
+
+    <div class="top_note">
+        <div class="top_note_text">
+            <p class="top_note_title">탑 노트</p>
+            <p class="top_note_content">향수를 뿌린 직후부터 15분 사이의 향을 말합니다. 향수를 발라 느끼는 순간 즉각적으로 느껴지는 가볍고 상쾌한 향이 주를 이룹니다. 휘발성이 강하고 가볍고 상쾌한 느낌을 주는 향으로 대개는 시트러스, 프루티, 그리고 가벼운 플로럴 계열의 향료가 사용됩니다. 향수를 뿌렸을 때 가장 먼저 느껴지는 부분으로, 사람들에게 첫인상을 남기는 요소 중 하나입니다.
+            </p>
+        </div>
+        <img class="top_note_img" src="https://i.pinimg.com/564x/83/4d/7e/834d7e4d1c156e224e136f21e738d94d.jpg">
+    </div>
+
+    <div class="middle_note">
+        <div class="middle_note_text">
+            <p class="middle_note_title">미들 노트</p>
+            <p class="middle_note_content">향수를 뿌린 후 30분에서 1시간 사이의 향을 말합니다. 하트 노트(heart notes)라고도 불리며, 탑 노트가 날아갔을 때 드러나는 향기입니다. 향수의 주요 향기를 형성하며, 향이 안정적이기 때문에 탑 노트에 비해 비교적 오래 지속됩니다. 대게 플로럴, 우디, 스파이시한 계열의 향료가 미들 노트에서 사용됩니다.
+            </p>
+        </div>
+        <img class="middle_note_img" src="https://i.pinimg.com/564x/12/21/ee/1221eebaf48009b712b207346455aba6.jpg">
+    </div>
+
+    <div class="base_note">
+        <div class="base_note_text">
+            <p class="base_note_title">베이스 노트</p>
+            <p class="base_note_content">향수를 뿌린 후 2시간 반 정도에서 3시간 정도 지속되는 향을 말합니다. 미들노트가 사라진 후 나타나는 마지막으로 오래 지속되는 향으로, 향수의 지속력을 결정짓는 중요한 부분입니다. 주로 바닐라, 머스크, 우디, 또는 스파이시 계열의 향료가 사용되며, 따뜻하고 깊은 향을 제공합니다.
+            </p>
+        </div>
+        <img class="base_note_img" src="https://i.pinimg.com/564x/da/1b/11/da1b11b88ea2ef7e69cb82b2e35587d5.jpg">
+    </div>
+
+    <div class="footer">
+        <div class="footer_total_info">
+            <div class="footer_first_info">
+                <p class="footer_first_info_text_1">PERFUMEGRAPHY PROCESS</p>
+                <p class="footer_first_info_text_2">퍼퓸그라피는 브랜드 직수입, 정식 계약 또는 공식 수입사를 통한 입점으로 100% 정품만 판매합니다.</p>
+            </div>
+
+            <div class="footer_second_info">
+                <div class="footer_second_info_sidebar">
+                    <div class="footer_second_info_sidebar_text">
+                        <p class="footer_second_info_sidebar_text_1">회사 소개</p>
+                        <p class="footer_second_info_sidebar_text_2">이용약관</p>
+                        <p class="footer_second_info_sidebar_text_3">개인정보처리방침</p>
+                        <p class="footer_second_info_sidebar_text_4">이용안내</p>
+                    </div>
+                    <div class="divid_line"></div>
+                    <div class="footer_second_info_sidebar_icon">
+                        <img class="instagram_icon" src="image/instagram.png">
+                        <img class="facebook_icon" src="image/facebook.png">
+                    </div>
+                </div>
+
+                <div class="footer_second_info_total_text">
+                    <div class="footer_second_info_total_text_line_1">
+                        <div class="trade_name">
+                            <p class="trade_name_title">상호명</p>
+                            <p class="trade_name_content">주식회사 퍼퓸그라피</p>
+                        </div>
+                        <div class="representative">
+                            <p class="representative_title">대표자</p>
+                            <p class="representative_content">송채연</p>
+                        </div>
+                        <div class="registration_num">
+                            <p class="registration_num_title">사업자 등록번호</p>
+                            <p class="registration_num_content">000-00-00000</p>
+                        </div>
+                        <div class="report_num">
+                            <p class="report_num_title">통신판매업신고번호</p>
+                            <p class="report_num_content">제 2019-서울종로-0106호 [사업자정보확인]</p>
+                        </div>
+                    </div>
+                    <div class="footer_second_info_total_text_line_2">
+                        <div class="customer_service">
+                            <p class="customer_service_title">고객센터</p>
+                            <p class="customer_service_content">000-0000-0000</p>
+                        </div>
+                        <div class="address">
+                            <p class="address_title">주소</p>
+                            <p class="address_content">00000 경기도 시흥시 산기대학로 237 한국공학대학교 퍼퓸그라피</p>
+                        </div>
+                        <div class="personal_info">
+                            <p class="personal_info_title">개인정보보호책임자</p>
+                            <p class="personal_info_content">송채연(thdcodus0222@tukorea.ac.kr)</p>
+                        </div>
+                    </div>
+                    <p class="footer_second_info_total_text_line_3">※ 퍼퓸그라피에서 제공하는 모든 컨텐츠는 저작권법에 보호받는 저작물로서, 무단으로 복제, 배포하는 경우에는 저작권법에 의하여 처벌 을 받을 수 있습니다.</p>
+                </div>
+                <p class="footer_third_info_text">Copyright © 퍼퓸그라피. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

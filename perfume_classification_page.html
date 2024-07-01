@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumegraphy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .topbar{
+            width: 100%;
+            height: 300px;
+            background-color: #F6F3F0;
+        }
+
+        .topbar_text{
+            width: 1620px;
+            height: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 100px 0;
+        }
+
+        .main_title{
+            font-size: 60px;
+            color: #5A3E19;
+            font-family: "Noto Serif KR", serif;
+            margin-left: 5px;
+            width: 500px;
+            height: 80px;
+            text-decoration: none;
+        }
+
+        .sidebar{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            width: 1620px;
+            height: 50px;
+        }
+
+        .sidebar_text{
+            width: 1300px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar_text_1:hover, .sidebar_text_2:hover, .sidebar_text_3:hover, .sidebar_text_4:hover{
+            font-weight: bold;
+            border-bottom: 2px solid #999999;
+        }
+
+        .sidebar_text_1, .sidebar_text_2{
+            width: 200px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 100px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_text_3{
+            width: 400px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 100px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_text_4{
+            width: 200px;
+            height:50px;
+            font-size: 35px;
+            color: #333333;
+            font-family: "Nanum Myeongjo", serif;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .sidebar_icon{
+            width: 200px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 120px;
+        }
+
+        .profile_icon, .heart_icon{
+            width: 40px;
+            height: 40px;
+            margin-right: 40px;
+            color: #333333;
+        }
+
+        .search_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+        }
+
+        .hello_box{
+            width: 1500px;
+            height: 400px;
+            font-size: 40px;
+            text-align: center;
+            color: #333333;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+            font-family: "Nanum Myeongjo", serif;
+            line-height: 60px;
+        }
+
+        .perfume{
+            width: 1400px;
+            height: 800px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .perfume_text{
+            width: 700px;
+            height: 680px;
+            margin: 60px 0;
+        }
+
+        .perfume_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .perfume_content{
+            width: 700px;
+            height: 600px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .perfume_img{
+            width: 600px;
+            height: 800px;
+            margin-left: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .eau_de_perfume{
+            width: 1400px;
+            height: 800px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .eau_de_perfume_text{
+            width: 700px;
+            height: 680px;
+            margin-top: 60px;
+            margin-left: 100px;
+            margin-bottom: 60px;
+        }
+
+        .eau_de_perfume_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .eau_de_perfume_content{
+            width: 700px;
+            height: 600px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .eau_de_perfume_img{
+            width: 600px;
+            height: 800px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .eau_de_toilette{
+            width: 1400px;
+            height: 800px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .eau_de_toilette_text{
+            width: 700px;
+            height: 680px;
+            margin: 60px 0;
+        }
+
+        .eau_de_toilette_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .eau_de_toilette_content{
+            width: 700px;
+            height: 600px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .eau_de_toilette_img{
+            width: 600px;
+            height: 800px;
+            margin-left: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .eau_de_cologne{
+            width: 1400px;
+            height: 800px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .eau_de_cologne_text{
+            width: 700px;
+            height: 680px;
+            margin-top: 60px;
+            margin-left: 100px;
+            margin-bottom: 60px;
+        }
+
+        .eau_de_cologne_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .eau_de_cologne_content{
+            width: 700px;
+            height: 600px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .eau_de_cologne_img{
+            width: 600px;
+            height: 800px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .shower_cologne{
+            width: 1400px;
+            height: 800px;
+            margin-top: 200px;
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .shower_cologne_text{
+            width: 700px;
+            height: 680px;
+            margin: 60px 0;
+        }
+
+        .shower_cologne_title{
+            width: 400px;
+            height: 80px;
+            color: #333333;
+            font-size: 60px;
+            font-family: "Nanum Myeongjo", serif;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .shower_cologne_content{
+            width: 700px;
+            height: 600px;
+            color: #333333;
+            font-size: 35px;
+            font-family: "Nanum Myeongjo", serif;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .shower_cologne_img{
+            width: 600px;
+            height: 800px;
+            margin-left: 100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .footer{
+            width: 100%;
+            height: 350px;
+            background-color: #F9F9F9;
+            margin-top: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer_total_info{
+            padding-left: 50px;
+            padding-top: 25px;
+            width: 1203px;
+            height: 320px;
+
+        }
+        .footer_first_info_text_1{
+            width: 400px;
+            height: 50px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .footer_first_info_text_2{
+            width: 900px;
+            height: 50px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .footer_first_info{
+            width: 900px;
+            height: 100px;
+        }
+
+        .footer_second_info{
+            width: 1143px;
+            height: 130px;
+        }
+
+        .footer_second_info_sidebar{
+            display: flex;
+            flex-direction: row;
+            width: 860px;
+            height: 40px;
+        }
+
+        .footer_second_info_sidebar_text{
+            width: 650px;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+        }
+
+        .footer_second_info_sidebar_text_1{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_2{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_3{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            margin-right: 50px;
+            text-align: center;
+        }
+
+        .footer_second_info_sidebar_text_4{
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            color: #333333;
+            font-family: "Noto Serif KR", serif;
+            text-align: center;
+        }
+
+        .divid_line {
+            border-left : 1px solid #999999;
+            height : 30px;
+            margin: 0 50px;
+        }
+
+        .footer_second_info_sidebar_icon{
+            width: 100px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .instagram_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+            margin-right: 20px;
+        }
+
+        .facebook_icon{
+            width: 40px;
+            height: 40px;
+            color: #333333;
+        }
+
+        .footer_second_info_total_text{
+            margin-left: 10px;
+        }
+
+
+        .footer_second_info_total_text_line_1{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .trade_name, .representative, .registration_num, .report_num, .customer_service, .address, .personal_info{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .trade_name_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .trade_name_content{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .representative_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .representative_content{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .registration_num_title{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .registration_num_content{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .report_num_title{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .report_num_content{
+            width: 300px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .footer_second_info_total_text_line_2{
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+        }
+
+        .customer_service_title{
+            width: 70px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .customer_service_content{
+            width: 110px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .address_title{
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .address_content{
+            width: 450px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .personal_info_title{
+            width: 150px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+        }
+
+        .personal_info_content{
+            width: 270px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #333333;
+            text-align: center;
+        }
+
+        .footer_second_info_total_text_line_3{
+            width: 1020px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .footer_third_info_text{
+            width: 330px;
+            height: 20px;
+            font-size: 15px;
+            font-family: "Noto Serif KR", serif;
+            color: #AAAAAA;
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar_text">
+            <a class="main_title" href="index.html">Perfumegraphy</a>
+            <div class="sidebar">
+                <div class="sidebar_text">
+                    <a class="sidebar_text_1" href="perfume_affiliation_page.html">향기의 계열</a>
+                    <a class="sidebar_text_2" href="perfume_classification_page.html">향수의 분류</a>
+                    <a class="sidebar_text_3" href="season_perfume_page.html">계절별로 어울리는 향수</a>
+                    <a class="sidebar_text_4" href="perfume_note_page.html">향수 노트</a>
+                </div>
+                <div class="sidebar_icon">
+                    <img class="profile_icon" src="image/profile.png">
+                    <img class="heart_icon" src="image/heart.png">
+                    <img class="search_icon" src="image/search.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="hello_box">향수의 종류는 알코올에 첨가한 향수 원액의 비율에 따라, 농도가 짙은순으로 퍼퓸(perfume)·오 드 퍼퓸(eau de perfume)·오 드 뚜왈렛(eau de toilette)·오 드 코롱(eau de perfume)의 네가지로 나뉩니다. 보통은 농도가 진할수록 가격이 비싼 편이라고 해요. 그렇지만 농도가 짙은 향수만이 꼭 좋은 향수는 아니랍니다. 향수를 고를 때에는 무조건 높은 농도의 향수를 선택하기보다 자신의 이미지에 맞는 향수를 선택하는 것이 더 중요합니다. 자, 그럼 지금부터 농도에 따른 향수의 종류를 알아볼까요?</p>
+    
+
+    <div class="perfume">
+        <div class="perfume_text">
+            <p class="perfume_title">퍼퓸</p>
+            <p class="perfume_content">퍼퓸은 99.5% 수준의 향료 농도와 알코올은 15~20%로 대략 5~7시간 동안 향이 지속됩니다. 향수 중 완성도가 가장 높으며 향료의 농도가 높기에 가격이 비싸다는 단점이 있지만, 향이 진하기 때문에 한 번만 뿌려도 매우 깊이가 있고 오랫동안 즐길 수 있습니다. 손목이나 목덜미에 2~3방울 정도 발라주는 것이 좋습니다.
+            </p>
+        </div>
+        <img class="perfume_img" src="https://i.pinimg.com/564x/1f/8b/0e/1f8b0eeda08e3284e5f5806315e26888.jpg">
+    </div>
+
+    <div class="eau_de_perfume">
+        <img class="eau_de_perfume_img" src="https://i.pinimg.com/564x/7a/a6/86/7aa686178ce088a3c175c9facbba543b.jpg">
+        <div class="eau_de_perfume_text">
+            <p class="eau_de_perfume_title">오 드 퍼퓸</p>
+            <p class="eau_de_perfume_content">오 드 퍼퓸은 향료 농도 10~15%, 알코올 85~90%로 지속 시간은 대략 4~6시간 정도입니다. 퍼퓸에 비해 지속력이 낮지만 향이 부담스럽지 않고 가격이 저렴해 적당한 지속 시간과 향을 가진 향수를 찾는 사람에게 적당합니다.
+            </p>
+        </div>
+    </div>
+
+    <div class="eau_de_toilette">
+        <div class="eau_de_toilette_text">
+            <p class="eau_de_toilette_title">오 드 뚜왈렛</p>
+            <p class="eau_de_toilette_content">오 드 뚜왈렛은 향료 농도 80~85%, 알코올 5~10%로 지속 시간은 대략 3~4시간 정도의 향수입니다. 향이 은은하고 독하지 않기 때문에 가볍게 쓰이기 좋아 많은 사람들이 애용하는 향수이기도 합니다.
+            </p>
+        </div>
+        <img class="eau_de_toilette_img" src="https://i.pinimg.com/564x/83/80/3b/83803be09ffdbbd014ed92133bc349e1.jpg">
+    </div>
+
+    <div class="eau_de_cologne">
+        <img class="eau_de_cologne_img" src="https://i.pinimg.com/564x/4c/e8/19/4ce8192b83d1e55394f9639206631da9.jpg">
+        <div class="eau_de_cologne_text">
+            <p class="eau_de_cologne_title">오 드 코롱</p>
+            <p class="eau_de_cologne_content">오 드 코롱은 향료 농도 3~5%, 알코올 75~85%로 지속 시간은 1~2시간입니다. 향이 가볍기 때문에 향수를 처음 뿌리는 사람들이 부담 없이 사용하기에 적합합니다.
+            </p>
+        </div>
+    </div>
+
+    <div class="shower_cologne">
+        <div class="shower_cologne_text">
+            <p class="shower_cologne_title">샤워 코롱</p>
+            <p class="shower_cologne_content">샤워 코롱은 향료 농도 1~3% 수준, 지속 시간은 1시간입니다. 샤워 후에 은은한 향기를 내기 위해 뿌리기 적합합니다. 지속 시간이 위의 향수들과 비교하여 짧긴 하지만 자연스러운 향기를 내기에는 안성맞춤입니다.
+            </p>
+        </div>
+        <img class="shower_cologne_img" src="https://i.pinimg.com/564x/dd/3c/47/dd3c4779d06aee0a1dffdf78633c81bc.jpg">
+    </div>
+
+    <div class="footer">
+        <div class="footer_total_info">
+            <div class="footer_first_info">
+                <p class="footer_first_info_text_1">PERFUMEGRAPHY PROCESS</p>
+                <p class="footer_first_info_text_2">퍼퓸그라피는 브랜드 직수입, 정식 계약 또는 공식 수입사를 통한 입점으로 100% 정품만 판매합니다.</p>
+            </div>
+
+            <div class="footer_second_info">
+                <div class="footer_second_info_sidebar">
+                    <div class="footer_second_info_sidebar_text">
+                        <p class="footer_second_info_sidebar_text_1">회사 소개</p>
+                        <p class="footer_second_info_sidebar_text_2">이용약관</p>
+                        <p class="footer_second_info_sidebar_text_3">개인정보처리방침</p>
+                        <p class="footer_second_info_sidebar_text_4">이용안내</p>
+                    </div>
+                    <div class="divid_line"></div>
+                    <div class="footer_second_info_sidebar_icon">
+                        <img class="instagram_icon" src="image/instagram.png">
+                        <img class="facebook_icon" src="image/facebook.png">
+                    </div>
+                </div>
+
+                <div class="footer_second_info_total_text">
+                    <div class="footer_second_info_total_text_line_1">
+                        <div class="trade_name">
+                            <p class="trade_name_title">상호명</p>
+                            <p class="trade_name_content">주식회사 퍼퓸그라피</p>
+                        </div>
+                        <div class="representative">
+                            <p class="representative_title">대표자</p>
+                            <p class="representative_content">송채연</p>
+                        </div>
+                        <div class="registration_num">
+                            <p class="registration_num_title">사업자 등록번호</p>
+                            <p class="registration_num_content">000-00-00000</p>
+                        </div>
+                        <div class="report_num">
+                            <p class="report_num_title">통신판매업신고번호</p>
+                            <p class="report_num_content">제 2019-서울종로-0106호 [사업자정보확인]</p>
+                        </div>
+                    </div>
+                    <div class="footer_second_info_total_text_line_2">
+                        <div class="customer_service">
+                            <p class="customer_service_title">고객센터</p>
+                            <p class="customer_service_content">000-0000-0000</p>
+                        </div>
+                        <div class="address">
+                            <p class="address_title">주소</p>
+                            <p class="address_content">00000 경기도 시흥시 산기대학로 237 한국공학대학교 퍼퓸그라피</p>
+                        </div>
+                        <div class="personal_info">
+                            <p class="personal_info_title">개인정보보호책임자</p>
+                            <p class="personal_info_content">송채연(thdcodus0222@tukorea.ac.kr)</p>
+                        </div>
+                    </div>
+                    <p class="footer_second_info_total_text_line_3">※ 퍼퓸그라피에서 제공하는 모든 컨텐츠는 저작권법에 보호받는 저작물로서, 무단으로 복제, 배포하는 경우에는 저작권법에 의하여 처벌 을 받을 수 있습니다.</p>
+                </div>
+                <p class="footer_third_info_text">Copyright © 퍼퓸그라피. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
